@@ -1,0 +1,27 @@
+define( 'FS_METHOD', 'direct' );
+
+FS_METHOD forces the filesystem method. It should only be "direct", "ssh2", "ftpext", or "ftpsockets". Generally, you should only change this if you are experiencing update problems. If you change it and it doesn't help, change it back/remove it. Under most circumstances, setting it to 'ftpsockets' will work if the automatically chosen method does not. Note that your selection here has serious security implications. If you are not familiar with them, you should seek help before making a change.
+(Primary Preference) "direct" forces it to use Direct File I/O requests from within PHP. It is the option chosen by default.
+(Secondary Preference) "ssh2" is to force the usage of the SSH PHP Extension if installed
+(3rd Preference) "ftpext" is to force the usage of the FTP PHP Extension for FTP Access, and finally
+(4th Preference) "ftpsockets" utilises the PHP Sockets Class for FTP Access.
+FTP_BASE is the full path to the "base"(ABSPATH) folder of the WordPress installation.
+FTP_CONTENT_DIR is the full path to the wp-content folder of the WordPress installation.
+FTP_PLUGIN_DIR is the full path to the plugins folder of the WordPress installation.
+FTP_PUBKEY is the full path to your SSH public key.
+FTP_PRIKEY is the full path to your SSH private key.
+FTP_USER is either user FTP or SSH username. Most likely these are the same, but use the appropriate one for the type of update you wish to do.
+FTP_PASS is the password for the username entered for FTP_USER. If you are using SSH public key authentication this can be omitted.
+FTP_HOST is the hostname:port combination for your SSH/FTP server. The default FTP port is 21 and the default SSH port is 22. These do not need to be mentioned.
+FTP_SSL TRUE for SSL-connection if supported by the underlying transport (not available on all servers). This is for "Secure FTP" not for SSH SFTP.
+define( 'FS_METHOD', 'ftpext' );
+define( 'FTP_BASE', '/path/to/wordpress/' );
+define( 'FTP_CONTENT_DIR', '/path/to/wordpress/wp-content/' );
+define( 'FTP_PLUGIN_DIR ', '/path/to/wordpress/wp-content/plugins/' );
+define( 'FTP_PUBKEY', '/home/username/.ssh/id_rsa.pub' );
+define( 'FTP_PRIKEY', '/home/username/.ssh/id_rsa' );
+define( 'FTP_USER', 'username' );
+define( 'FTP_PASS', 'password' );
+define( 'FTP_HOST', 'ftp.example.org' );
+define( 'FTP_SSL', false );
+Some configurations should set FTP_HOST to localhost to avoid 503 problems when trying to update plugins or WP itself.
