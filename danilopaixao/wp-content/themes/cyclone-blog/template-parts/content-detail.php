@@ -1,11 +1,14 @@
 <div class="detail-content single_page">
 
 	<?php 
+	/*
+
+	//retirada da imagem em destaque no post
 	if( has_post_thumbnail() ){
 		echo '<div class="detail_image_wrapper">';
 		the_post_thumbnail( 'cyclone_blog_detail_image' );
 		echo '</div>';
-	}
+	}*/
 
 	if( !is_attachment() ){ ?>
 
