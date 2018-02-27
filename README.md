@@ -11,7 +11,16 @@ Simple text.  Below, screenshot command of DaniloPaixao.COM
 ## JustTwoMarkWithOutLink
 Text here.
 ## [JustTwoMarkWithLink](http://codemirror.net/).Text
-* Display **line number**.* **Match Brackets** in the document.* Visible `Tab` key* **Highlight syntax** of markdown.* **Drag and Drop** file read.* Switchable theme.
+* Display 
+**line number**.
+* **Match Brackets
+** in the document.
+* Visible `Tab` key
+* **Highlight syntax
+** of markdown.
+* **Drag and Drop
+** file read.
+* Switchable theme.
 The raw API is not JSON-based. It takes a Markdown document as plaintext `text/plain` or `text/x-markdown` and renders it as plain Markdown without a repository context (just like a README.md file is rendered – this is the simplest way to preview a readme online).
 For more infomation, See official Guide.
 
